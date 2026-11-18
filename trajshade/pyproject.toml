@@ -1,0 +1,30 @@
+[project]
+name = "trajshade"
+version = "0.1.0"
+description = "Interactive datashader line aggregations of particle trajectory stores"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "zarr>=3",
+    "datashader",
+    "holoviews",
+    "panel",
+    "bokeh",
+    "colorcet",
+    "matplotlib",
+]
+
+[project.scripts]
+trajshade = "trajshade.cli:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
