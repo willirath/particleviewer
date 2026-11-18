@@ -4,6 +4,8 @@ A live terminal view of a running [kelp](../kelp) experiment. It is a sidecar: i
 only reads the growing Zarr trajectory store (`data.output_path: ….zarr`) and
 never touches the run.
 
+![kelp-live panel gallery (density, field, section, stats) for a one-year Arctic kelp run](docs/screenshot.png)
+
 ```bash
 uv sync
 uv run kelp-live run.yaml                    # a kelp config: finds output_path and mesh.meshpath

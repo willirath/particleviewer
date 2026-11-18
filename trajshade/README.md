@@ -4,6 +4,8 @@ Interactive [datashader](https://datashader.org) aggregations of particle trajec
 from a Zarr store (kelp output format 2, or Parcels layout with trajectory × obs).
 Every pan / zoom re-aggregates the lines at screen resolution.
 
+![trajshade browser app: distinct-trajectory aggregation of a one-year Arctic kelp run](docs/screenshot.png)
+
 ```bash
 uv sync
 uv run trajshade tracks.zarr          # browser app (Panel / HoloViews / Bokeh)

@@ -3,3 +3,4 @@ __pycache__/
 *.png
 *.zarr/
 .pytest_cache/
+!*/docs/*.png
