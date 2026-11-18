@@ -1,0 +1,32 @@
+[project]
+name = "kelp-livetrack"
+version = "0.1.0"
+description = "Live terminal view of a growing kelp Zarr trajectory store"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+    "zarr>=3",
+    "xarray",
+    "h5netcdf",
+    "h5py",
+    "rich",
+    "textual",
+    "pyyaml",
+    "pillow",
+]
+
+[project.scripts]
+kelp-live = "kelp_livetrack.cli:main"
+kelp-live-replay = "kelp_livetrack.replay:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
